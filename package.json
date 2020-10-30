@@ -1,0 +1,43 @@
+{
+    "name": "vue-ld-{plugin-shortcode}",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "vue-cli-service build --no-clean",
+        "dev": "vue-cli-service build --no-clean --watch --mode=development"
+    },
+    "dependencies": {
+        "@vueuse/core": "^4.0.0-beta.4",
+        "core-js": "^3.6.5",
+        "vue": "^3.0.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.5.6",
+        "@vue/cli-service": "^4.5.6",
+        "@vue/compiler-sfc": "^3.0.0-0",
+        "gettext-extractor": "^3.5.2",
+        "node-sass": "^4.13.1",
+        "postcss-embed-svg": "^0.9.1",
+        "postcss-flexbugs-fixes": "^4.1.0",
+        "sass-loader": "^9.0.3"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {},
+            "postcss-flexbugs-fixes": {}
+        }
+    },
+    "browserslist": [
+        ">= 1%",
+        "last 1 major version",
+        "not dead",
+        "Chrome >= 45",
+        "Firefox >= 38",
+        "Edge >= 12",
+        "Explorer >= 10",
+        "iOS >= 9",
+        "Safari >= 9",
+        "Android >= 4.4",
+        "Opera >= 30"
+    ]
+}
