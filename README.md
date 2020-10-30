@@ -21,6 +21,18 @@ This plugin will introduce a shortcode that you can use in your WordPress theme.
 * ld-{plugin-shortcode} => ld-form-quote
 * LD_{PLUGIN}_DIR => LD_FORM_QUOTE_DIR
 
+**Automatic versioning files**
+
+The plugin will automatically version JS and CSS files. The `ld _{plugin}_auto_version_file` does this. This feature needs `.htaccess` update. But you are free to remove it.
+
+```shell
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+
+   RewriteRule ^(.*)\.[\d]{10}\.(css|js)$ $1.$2 [L]
+
+</IfModule>
+```
 ## Development
 
 ## 👉  `npm install`
