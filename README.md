@@ -23,7 +23,7 @@ This plugin will introduce a shortcode that you can use in your WordPress theme.
 
 **Automatic versioning files**
 
-The plugin will automatically version JS and CSS files. The `ld _{plugin}_auto_version_file` does this. This feature needs `.htaccess` update. But you are free to remove it.
+The plugin will automatically version JS and CSS files. The `ld _{plugin}_auto_version_file` does this. This feature needs `.htaccess`. But you are free to remove it.
 
 ```shell
 <IfModule mod_rewrite.c>

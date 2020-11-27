@@ -26,6 +26,16 @@ const extractGettextForPHP = function(options) {
 
     messages.forEach( (value, index, array) => {
         var text = value.text.replace(/__\('(.+)'\)/, '$1');
+
+        text = text.replace(/\\/g, '\\\\')
+            .replace(/\u0008/g, '\\b')
+            .replace(/\t/g, '\\t')
+            .replace(/\n/g, '\\n')
+            .replace(/\f/g, '\\f')
+            .replace(/\r/g, '\\r')
+            .replace(/'/g, '\\\'')
+            .replace(/"/g, '\\"');
+
         php.push(`  // ${value.references.join(', ')}`);
         php.push(`  '${text}' => _x('${text}', '${options.context}', '${options.domain}'),`);
     });
