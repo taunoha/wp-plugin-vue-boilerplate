@@ -26,17 +26,15 @@ function ld_{plugin}_auto_version_file($file)
 
 function ld_{plugin}_log($error)
 {
-    $errorPath = ini_get('error_log');
-    $logErrors = ini_get('log_errors');
-    $tmpErrorPath = WP_CONTENT_DIR . '/ld-{plugin-shortcode}.log';
+    if( ! is_string($error) ) {
+        $error = wp_json_encode($error);
+    }
 
-    ini_set('log_errors', 1);
-    ini_set('error_log', $tmpErrorPath);
+    $time = wp_date('Y-m-d H:i:s');
 
-    error_log('[ld-{plugin-shortcode}] ' . $error);
+    do_action('ld_{plugin}_log', $error, $time);
 
-    ini_set('log_errors', $logErrors);
-    ini_set('error_log', $errorPath);
+    error_log("[{$time}] LD-{PLUGIN} {$error}\n" , 3, WP_CONTENT_DIR . '/ld-{plugin}.log');
 }
 
 function ld_{plugin}_script_data()
