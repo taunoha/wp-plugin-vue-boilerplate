@@ -4,7 +4,7 @@ This plugin will introduce a shortcode that you can use in your WordPress theme.
 
 ```php
 <?php
-   echo apply_shortcodes('[ld-{plugin-shortcode}]');
+   echo do_shortcode('[ld-{plugin-shortcode}]');
 ?>
 ```
 
