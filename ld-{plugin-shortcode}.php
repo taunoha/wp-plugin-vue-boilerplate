@@ -24,7 +24,7 @@ function ld_{plugin}_auto_version_file($file)
     return preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $file);
 }
 
-function ld_{plugin}_log($error)
+function ld_{plugin}_log($error, $type = 'log')
 {
     if( ! is_string($error) ) {
         $error = wp_json_encode($error);
@@ -32,7 +32,7 @@ function ld_{plugin}_log($error)
 
     $time = wp_date('Y-m-d H:i:s');
 
-    do_action('ld_{plugin}_log', $error, $time);
+    do_action('ld_{plugin}_log', $error, $type, $time);
 
     error_log("[{$time}] LD-{PLUGIN} {$error}\n" , 3, WP_CONTENT_DIR . '/ld-{plugin}.log');
 }
