@@ -35,7 +35,8 @@ module.exports = {
         extractGettextForPHP({
             path: path.resolve(__dirname, 'languages/'),
             context: 'ld-{plugin-shortcode}',
-            domain: ''
+            domain: '',
+            attrs: ['placeholder']
         });
 
         config.plugins.delete('html');

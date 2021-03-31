@@ -5,7 +5,8 @@ const extractGettextForPHP = function(options) {
     var options = options || {
         path: '',
         context: '',
-        domain: ''
+        domain: '',
+        attrs: ['placeholder']
     };
     var php = ['<?php', '', "defined('ABSPATH') or die();", '', 'return array('];
     var messages = [];
@@ -20,6 +21,19 @@ const extractGettextForPHP = function(options) {
         ])
         .parseFilesGlob('./src/**/*.vue')
         .parseFilesGlob('./src/**/*.js');
+
+    for( attr of options.attrs )
+    {
+        extractor
+            .createHtmlParser([
+                HtmlExtractors.elementAttribute('*', `:${attr}`, {
+                    arguments: {
+                        text: 0
+                    }
+                })
+            ])
+            .parseFilesGlob('./src/**/*.vue');
+    }
 
     messages = extractor.getMessages();
 
