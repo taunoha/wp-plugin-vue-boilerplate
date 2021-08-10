@@ -34,8 +34,9 @@ function ld_{plugin}_log($error, $type = 'log')
 
     do_action('ld_{plugin}_log', $error, $type, $time);
 
-    error_log("[{$time}] LD-{PLUGIN} {$error}\n" , 3, WP_CONTENT_DIR . '/ld-{plugin}.log');
+    error_log("[{$time}] {$type}: {$error}\n", 3, WP_CONTENT_DIR . '/ld-{plugin}.log');
 }
+
 
 function ld_{plugin}_script_data()
 {
