@@ -51,7 +51,7 @@ const extractGettextForPHP = function(options) {
             .replace(/"/g, '\\"');
 
         php.push(`  // ${value.references.join(', ')}`);
-        php.push(`  '${text}' => _x('${text}', '${options.context}', '${options.domain}'),`);
+        php.push(`  "${text}" => _x("${text}", '${options.context}', '${options.domain}'),`);
     });
 
     php.push(');');
