@@ -4,7 +4,7 @@ This plugin will introduce a shortcode that you can use in your WordPress theme.
 
 ```php
 <?php
-   echo do_shortcode('[ld-{plugin-shortcode}]');
+   echo apply_shortcodes('[ld-{plugin-shortcode}]');
 ?>
 ```
 
@@ -28,9 +28,7 @@ The plugin will automatically version JS and CSS files. The `ld _{plugin}_auto_v
 ```shell
 <IfModule mod_rewrite.c>
    RewriteEngine On
-
    RewriteRule ^(.*)\.[\d]{10}\.(css|js)$ $1.$2 [L]
-
 </IfModule>
 ```
 ## Development
@@ -43,7 +41,7 @@ The plugin will automatically version JS and CSS files. The `ld _{plugin}_auto_v
 * Watches for any changes and reports back any errors in your code.
 
 ## 👉  `npm run build`
-- Use to build production code inside `dist` folder.
+- Builds production code inside `dist` folder.
 - Will extract translatable strings from your code and generates the `languages/messages.php` file.
 
 ## i18n
@@ -54,12 +52,13 @@ To make strings translatable use the `__('Translatable string')` function in you
 <template>
    <article>
       <h1>{{ __('Hello World!') }}</h1>
+      <h1>{{ __('Hello World!', 'additional-context') }}</h1>
    </article>
 </template>
 
 <script>
 export default {
-   name : 'App',
+   name: 'App',
    computed: {
       someString() {
          return this.__('Some string');

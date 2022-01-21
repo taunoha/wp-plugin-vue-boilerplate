@@ -1,9 +1,10 @@
-import { createApp } from 'vue';
-import Root from './App.vue';
+import { createApp } from 'vue'
+import App from './App.vue'
 import i18n from '@/plugins/i18n';
-import './assets/scss/main.scss';
 
-const App = createApp(Root);
+import './assets/main.scss';
 
-App.use(i18n);
-App.mount('#ld-{plugin-shortcode}');
+const app = createApp(App);
+
+app.use(i18n, ld_{plugin}.str);
+app.mount('#app');

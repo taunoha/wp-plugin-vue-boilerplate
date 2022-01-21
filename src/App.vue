@@ -1,19 +1,13 @@
 <template>
-    <article>
-        <h1>Hello World!</h1>
-        <HelloWorld></HelloWorld>
-    </article>
+  <main>
+    <p>{{ __('Hello World') }}</p>
+  </main>
 </template>
 
-<script>
+<script setup>
 
-import HelloWorld from '@/components/HelloWorld';
-
-export default {
-    name : 'App',
-    components: {
-        HelloWorld
-    }
-}
 </script>
 
+<style lang="scss" scoped>
+
+</style>

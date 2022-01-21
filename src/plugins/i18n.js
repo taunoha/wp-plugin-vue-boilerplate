@@ -1,13 +1,13 @@
 const i18n = {
-    install(Vue, options) {
-        Vue.mixin({
-            methods: {
-                __(str) {
-                    return ld_{plugin}.str[str] || str;
-                }
-            }
-        });
-    }
+  install(app, translations) {
+    app.mixin({
+      methods: {
+        __(str) {
+          return translations ? translations[str] || str : str;
+        }
+      }
+    });
+  }
 };
 
 export default i18n;
