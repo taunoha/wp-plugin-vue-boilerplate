@@ -6,5 +6,5 @@ import './assets/main.scss';
 
 const app = createApp(App);
 
-app.use(i18n, ld_{plugin}.str);
+app.use(i18n, ld_{plugin-shortcode}.str);
 app.mount('#app');

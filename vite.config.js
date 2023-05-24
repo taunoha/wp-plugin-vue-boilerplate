@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import gettextExtractorForWordpress from './vite-plugins/gettext-extractor-for-wordpress.js'
 
-const filename = 'ld-forms-api';
+const filename = '{plugin}';
 
 // https://vitejs.dev/config/
 export default defineConfig({
