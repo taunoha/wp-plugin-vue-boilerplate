@@ -40,11 +40,6 @@ export default function gettextExtractorForWordpress(options) {
 
       messages.forEach( (value) => {
           var text = value.text.replace(/__\('(.+)'\)/, '$1');
-          var context = opts.context;
-
-          if( value.context ) {
-            context = context ? `${context} - ${value.context}` : value.context;
-          }
 
           text = text.replace(/\\/g, '\\\\')
               .replace(/\u0008/g, '\\b')
@@ -56,7 +51,7 @@ export default function gettextExtractorForWordpress(options) {
               .replace(/"/g, '\\"');
 
           php.push(`  // ${value.references.join(', ')}`);
-          php.push(`  "${text}" => _x("${text}", '${context}', '${opts.domain}'),`);
+          php.push(`  "${text}" => __("${text}", '${opts.domain}'),`);
       });
 
       php.push(');');

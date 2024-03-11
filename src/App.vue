@@ -1,13 +1,11 @@
 <script setup>
-
+import { __ } from "@/plugins/i18n";
+const message = __("This is a message from i18n!");
 </script>
 
 <template>
-  <main>
-    <p>{{ __('Hello World') }}</p>
-  </main>
+  <article>
+    <h1>{{ __("Hello, World!") }}</h1>
+    <p>{{ message }}</p>
+  </article>
 </template>
-
-<style lang="scss" scoped>
-
-</style>

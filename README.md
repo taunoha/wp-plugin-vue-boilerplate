@@ -4,7 +4,7 @@ This plugin will introduce a shortcode that you can use in your WordPress theme.
 
 ```php
 <?php
-   echo apply_shortcodes('[ld-{plugin-shortcode}]');
+   echo apply_shortcodes('[{plugin-shortcode}]');
 ?>
 ```
 
@@ -13,17 +13,13 @@ This plugin will introduce a shortcode that you can use in your WordPress theme.
 **Remove:**
 * .git folder
 
-**Rename files:**
-* ld-{plugin-shortcode}.php => ld-form-quote.php
+## 👉  `npm install`
+* Install the dependencies in the local node_modules folder.
 
-**Find in files and replace:**
-* ld_{plugin} => ld_form_quote
-* ld-{plugin-shortcode} => ld-form-quote
-* LD_{PLUGIN}_DIR => LD_FORM_QUOTE_DIR
+## 👉  `node run rename`
+* Rename placeholder strings in files
 
-**Automatic versioning files**
-
-The plugin will automatically version JS and CSS files. The `ld _{plugin}_auto_version_file` does this. This feature needs `.htaccess`. But you are free to remove it.
+The plugin will automatically version JS and CSS files. The `ld_{plugin}_auto_version_file` does this. This feature needs `.htaccess`. But you are free to remove it.
 
 ```shell
 <IfModule mod_rewrite.c>
@@ -33,12 +29,13 @@ The plugin will automatically version JS and CSS files. The `ld _{plugin}_auto_v
 ```
 ## Development
 
-## 👉  `npm install`
-* Install the dependencies in the local node_modules folder.
-
 ## 👉  `npm run dev`
 * Use to compile and run the code in development mode.
 * Watches for any changes and reports back any errors in your code.
+* 
+## 👉  `npm run lint`
+* Check your source code for programmatic and stylistic errors. 
+* Format your source code
 
 ## 👉  `npm run build`
 - Builds production code inside `dist` folder.
@@ -49,21 +46,15 @@ The plugin will automatically version JS and CSS files. The `ld _{plugin}_auto_v
 To make strings translatable use the `__('Translatable string')` function in your SFC files.
 
 ```html
-<template>
-   <article>
-      <h1>{{ __('Hello World!') }}</h1>
-      <h1>{{ __('Hello World!', 'additional-context') }}</h1>
-   </article>
-</template>
-
-<script>
-export default {
-   name: 'App',
-   computed: {
-      someString() {
-         return this.__('Some string');
-      }
-   }
-}
+<script setup>
+import { __ } from "@/plugins/i18n";
+const message = __("This is a message from i18n!");
 </script>
+
+<template>
+  <article>
+    <h1>{{ __("Hello, World!") }}</h1>
+    <p>{{ message }}</p>
+  </article>
+</template>
 ```
