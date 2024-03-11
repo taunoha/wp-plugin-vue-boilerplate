@@ -1,7 +1,7 @@
 # wp-vue-plugin-boilerplate
 
-This plugin will introduce a shortcode that you can use in your WordPress theme. WordPress will replace this shortcode with Vue-powered UI.
-It allows you to use Vue based stateful and reactive application on your WordPress site with minimal configuration.
+This plugin introduces a shortcode that you can use in your WordPress theme. WordPress replaces this shortcode with a Vue-powered UI. 
+It allows you to use a Vue-based stateful and reactive application on your WordPress site with minimal configuration.
 
 ```php
 <?php
