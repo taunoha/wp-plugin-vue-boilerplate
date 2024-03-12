@@ -8,6 +8,7 @@ It allows you to use a Vue-based stateful and reactive application on your WordP
    echo apply_shortcodes('[{plugin-shortcode}]');
 ?>
 ```
+You can add the shortcode to any page or post by using the `Shortcode block` in your WordPress editor.
 
 ## Before you start
 
