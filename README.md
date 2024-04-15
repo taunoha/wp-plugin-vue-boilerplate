@@ -18,10 +18,10 @@ Is is also possible to use the `Shortcode block` in your WordPress editor to add
 ## 👉  `npm install`
 * Install the dependencies in the local node_modules folder.
 
-## 👉  `node run rename`
+## 👉  `npm run rename`
 * Rename placeholder strings in files
 
-The plugin will automatically version JS and CSS files. The `ld_{plugin}_auto_version_file` does this. This feature needs `.htaccess`. But you are free to remove it.
+The plugin will automatically version JS and CSS files. The `ld_{plugin}_auto_version_file` fucntion does it. This feature needs `.htaccess`. But you are free to remove it.
 
 ```shell
 <IfModule mod_rewrite.c>
