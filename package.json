@@ -10,18 +10,18 @@
   "type": "module",
   "dependencies": {
     "@vueuse/core": "^10.9.0",
-    "vue": "^3.4.21"
+    "vue": "^3.4.23"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-prettier": "^7.1.0",
     "eslint": "^8.43.0",
-    "eslint-plugin-vue": "^9.15.0",
+    "eslint-plugin-vue": "^9.25.0",
     "gettext-extractor": "^3.8.0",
     "prettier": "^2.8.8",
     "prompts": "^2.4.2",
-    "sass": "^1.71.1",
-    "vite": "^5.1.5"
+    "sass": "^1.75.0",
+    "vite": "^5.2.10"
   }
 }
