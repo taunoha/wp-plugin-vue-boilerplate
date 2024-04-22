@@ -8,7 +8,7 @@ It allows you to use a Vue-based stateful and reactive application on your WordP
    echo apply_shortcodes('[{plugin-shortcode}]');
 ?>
 ```
-Is is also possible to use the `Shortcode block` in your WordPress editor to add the shortcode to any page or post.
+It is also possible to use the `Shortcode block` in your WordPress editor to add the shortcode to any page or post.
 
 ## Before you start
 
@@ -34,7 +34,7 @@ The plugin will automatically version JS and CSS files. The `ld_{plugin}_auto_ve
 ## 👉  `npm run dev`
 * Use to compile and run the code in development mode.
 * Watches for any changes and reports back any errors in your code.
-* 
+  
 ## 👉  `npm run lint`
 * Check your source code for programmatic and stylistic errors. 
 * Format your source code
@@ -45,7 +45,7 @@ The plugin will automatically version JS and CSS files. The `ld_{plugin}_auto_ve
 
 ## i18n
 
-To make strings translatable use the `__('Translatable string')` function in your SFC files.
+To make strings translatable use the `__("Translatable string")` function in your SFC files.
 
 ```html
 <script setup>
