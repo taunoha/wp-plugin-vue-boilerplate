@@ -1,6 +1,6 @@
 # wp-vue-plugin-boilerplate
 
-This plugin introduces a shortcode that you can use in your WordPress theme. WordPress replaces this shortcode with a Vue-powered UI. 
+This plugin introduces a shortcode for your WordPress theme. WordPress replaces this shortcode with a Vue-powered UI. 
 It allows you to use a Vue-based stateful and reactive application on your WordPress site with minimal configuration.
 
 ```php
@@ -8,7 +8,7 @@ It allows you to use a Vue-based stateful and reactive application on your WordP
    echo apply_shortcodes('[{plugin-shortcode}]');
 ?>
 ```
-It is also possible to use the `Shortcode block` in your WordPress editor to add the shortcode to any page or post.
+You can also use the `Shortcode block` in your WordPress editor to add the shortcode to any page or post.
 
 ## Before you start
 
@@ -33,11 +33,11 @@ It is also possible to use the `Shortcode block` in your WordPress editor to add
 
 ## 👉  `npm run build`
 - Builds production code inside `dist` folder.
-- Will extract translatable strings from your code and generates the `languages/messages.php` file.
+- Will extract translatable strings from your code and generate the `languages/messages.php` file.
 
 ## i18n
 
-To make strings translatable use the `__("Translatable string")` function in your SFC files.
+Use the `__("Translatable string")` function in your SFC files to make strings translatable.
 
 ```html
 <script setup>
