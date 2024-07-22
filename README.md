@@ -49,9 +49,9 @@ const message = __("This is a message from i18n!");
   <article>
     <h1>{{ __("Hello, World!") }}</h1>
     <p>{{ message }}</p>
-    <p>{{ _n('%d person', '%d people', 2) }}</p>
-    <p>{{ _nx('%d person', '%d people', 2, 'different context') }}</p>
-    <p>{{ _x('This is a message from i18n!', "different context") }}</p>
+    <p>{{ _n("%d person", "%d people", 2) }}</p>
+    <p>{{ _nx("%d person", "%d people", 2, "different context") }}</p>
+    <p>{{ _x("This is a message from i18n!", "different context") }}</p>
   </article>
 </template>
 ```

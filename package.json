@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite build --watch --mode=development",
-    "build": "vite build",
+    "build": "eslint ./src --ext .vue,.js --fix && vite build",
     "lint": "eslint ./src --ext .vue,.js --fix",
     "rename": "node rename.js && npm run build"
   },
