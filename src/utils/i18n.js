@@ -8,5 +8,6 @@ export const _n = (text = "", textPlural = "", number = 0) =>
   wpSprintf(i18n._n(text, textPlural, number), number);
 export const _nx = (text = "", textPlural = "", number = 0, context = "") =>
   wpSprintf(i18n._nx(text, textPlural, number, context), number);
+// Source: https://github.com/alexei/sprintf.js
 export const sprintf = wpSprintf;
 export const setLocaleData = i18n.setLocaleData;
