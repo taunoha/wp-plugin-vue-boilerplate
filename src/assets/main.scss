@@ -1,0 +1,8 @@
+#{plugin-shortcode} {
+  background-color: #eee;
+  min-height: 200px;
+
+  &[v-cloak] {
+    visibility: hidden;
+  }
+}

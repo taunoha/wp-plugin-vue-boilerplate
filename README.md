@@ -21,14 +21,6 @@ It is also possible to use the `Shortcode block` in your WordPress editor to add
 ## 👉  `npm run rename`
 * Rename placeholder strings in files
 
-The plugin will automatically version JS and CSS files. The `ld_{plugin}_auto_version_file` function does it. This feature needs `.htaccess`. But you are free to remove it.
-
-```shell
-<IfModule mod_rewrite.c>
-   RewriteEngine On
-   RewriteRule ^(.*)\.[\d]{10}\.(css|js)$ $1.$2 [L]
-</IfModule>
-```
 ## Development
 
 ## 👉  `npm run dev`
@@ -49,7 +41,7 @@ To make strings translatable use the `__("Translatable string")` function in you
 
 ```html
 <script setup>
-import { __ } from "@/plugins/i18n";
+import { __, _x, _n, _nx, sprintf } from "@/utils/i18n";
 const message = __("This is a message from i18n!");
 </script>
 
@@ -57,6 +49,9 @@ const message = __("This is a message from i18n!");
   <article>
     <h1>{{ __("Hello, World!") }}</h1>
     <p>{{ message }}</p>
+    <p>{{ sprintf(_n('%d person', '%d people', 2), 2) }}</p>
+    <p>{{ sprintf(_nx('%d person', '%d people', 2, 'different context'), 2) }}</p>
+    <p>{{ _x('This is a message from i18n!', "different context") }}</p>
   </article>
 </template>
 ```

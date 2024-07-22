@@ -1,5 +1,5 @@
 <script setup>
-import { __ } from "@/plugins/i18n";
+import { __ } from "@/utils/i18n";
 const message = __("This is a message from i18n!");
 </script>
 

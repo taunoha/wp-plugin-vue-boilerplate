@@ -5,23 +5,25 @@
     "dev": "vite build --watch --mode=development",
     "build": "vite build",
     "lint": "eslint ./src --ext .vue,.js --fix",
-    "rename": "node rename.js"
+    "rename": "node rename.js && npm run build"
   },
   "type": "module",
   "dependencies": {
-    "@vueuse/core": "^10.9.0",
-    "vue": "^3.4.23"
+    "@vueuse/core": "^10.11.0",
+    "@wordpress/i18n": "^5.3.0",
+    "@wordpress/interactivity": "^6.3.0",
+    "vue": "^3.4.33"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-prettier": "^9.0.0",
-    "eslint": "^8.43.0",
-    "eslint-plugin-vue": "^9.25.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.27.0",
     "gettext-extractor": "^3.8.0",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.3",
     "prompts": "^2.4.2",
-    "sass": "^1.75.0",
-    "vite": "^5.2.10"
+    "sass": "^1.77.8",
+    "vite": "^5.3.4"
   }
 }

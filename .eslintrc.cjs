@@ -21,9 +21,6 @@ module.exports = {
       ]
     },
     globals: {
-      "_": "readable",
-      "jQuery": "readable",
-      "see_on_minu_esimene_plugin": "readable",
       "wp": "readable"
     }
   };
