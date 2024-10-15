@@ -15,7 +15,7 @@ You can also use the `Shortcode block` in your WordPress editor to add the short
 > [!NOTE]
 > Prerequisites
 > * Familiarity with the command line
-> * Install Node.js version 20.0 (LTS) or higher LTS
+> * Install [Node.js](https://nodejs.org/en) version 20.0 (LTS) or higher LTS
 
 **Remove:**
 * .git folder
