@@ -12,6 +12,11 @@ You can also use the `Shortcode block` in your WordPress editor to add the short
 
 ## Before you start
 
+> [!NOTE]
+> Prerequisites
+> * Familiarity with the command line
+> * Install Node.js version 20.0 (LTS) or higher LTS
+
 **Remove:**
 * .git folder
 
