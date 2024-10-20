@@ -1,7 +1,9 @@
 import { fileURLToPath, URL } from 'url';
 import path from 'path';
 
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
 import vue from '@vitejs/plugin-vue'
 import gettextExtractorForWordpress from './vite-plugins/gettext-extractor-for-wordpress.js'
 
@@ -14,6 +16,15 @@ export default defineConfig({
   },
   plugins: [
     vue(), 
+    AutoImport({
+      imports: ['vue'],
+      dirs: [
+        './src/utils/**',
+        './src/composables/**',
+      ],
+      vueTemplate: true,
+    }),
+    Components(),
     gettextExtractorForWordpress({
       path: path.resolve(__dirname, 'languages/'),
       context: '',

@@ -1,5 +1,4 @@
 <script setup>
-import { __ } from "@/utils/i18n";
 const message = __("This is a message from i18n!");
 </script>
 
