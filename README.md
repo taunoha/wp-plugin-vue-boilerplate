@@ -39,7 +39,7 @@ You can also use the `Shortcode block` in your WordPress editor to add the short
 ### 👉  `npm run build`
 * Check your source code for programmatic and stylistic errors.
 * Will extract translatable strings from your code and generate the `languages/messages.php` file.
-* 
+  
 ## ❗️ Deploy
 
 The `dist` folder will be overridden each time you run `npm run build` or `npm run dev`. Do not commit this folder to version control. If you use any CI/CD pipeline, make sure to trigger the build process as part of your deployment workflow.
