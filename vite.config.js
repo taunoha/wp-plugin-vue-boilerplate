@@ -17,12 +17,18 @@ export default defineConfig({
   plugins: [
     vue(), 
     AutoImport({
-      imports: ['vue'],
+      imports: [
+        'vue',
+        '@vueuse/core',
+      ],
       dirs: [
         './src/utils/**',
         './src/composables/**',
       ],
       vueTemplate: true,
+      eslintrc: {
+        enabled: true,
+      },
     }),
     Components(),
     gettextExtractorForWordpress({

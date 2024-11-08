@@ -3,7 +3,7 @@ import App from "./App.vue";
 import { getConfig } from "@wordpress/interactivity";
 import { setLocaleData } from "@/utils/i18n";
 
-import "./assets/main.scss";
+import "./assets/scss/main.scss";
 
 const translations = getConfig("{plugin-shortcode}").translations;
 

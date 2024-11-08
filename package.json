@@ -3,29 +3,35 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite build --watch --mode=development",
-    "build": "eslint ./src --ext .vue,.js --fix && vite build",
-    "lint": "eslint ./src --ext .vue,.js --fix",
+    "build": "npm run lint && vite build",
+    "lint": "npx stylelint ./src/assets/scss/**/*.scss --fix && npx stylelint ./src/{components,pages}/**/*.vue --fix && eslint ./src --fix",
     "rename": "node rename.js && npm run build"
   },
   "type": "module",
   "dependencies": {
-    "@vueuse/core": "^11.1.0",
-    "@wordpress/i18n": "^5.10.0",
-    "@wordpress/interactivity": "^6.10.0",
+    "@vueuse/core": "^11.2.0",
+    "@wordpress/i18n": "^5.11.0",
+    "@wordpress/interactivity": "^6.11.0",
     "vue": "^3.5.12"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
     "@vitejs/plugin-vue": "^5.1.4",
-    "@vue/eslint-config-prettier": "^9.0.0",
-    "eslint": "^8.57.1",
-    "eslint-plugin-vue": "^9.29.0",
+    "@vue/eslint-config-prettier": "^10.1.0",
+    "eslint": "^9.14.0",
+    "eslint-plugin-vue": "^9.30.0",
     "gettext-extractor": "^3.8.0",
     "prettier": "^3.3.3",
     "prompts": "^2.4.2",
-    "sass": "^1.80.3",
+    "sass": "^1.80.6",
+    "stylelint": "^16.10.0",
+    "stylelint-config-recess-order": "^5.1.1",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-prettier": "^5.0.2",
     "unplugin-auto-import": "^0.18.3",
     "unplugin-vue-components": "^0.27.4",
-    "vite": "^5.4.9"
+    "vite": "^5.4.10"
   }
 }
