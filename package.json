@@ -2,9 +2,9 @@
   "name": "{plugin}",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite build --watch --mode=development",
-    "build": "npm run lint && vite build",
-    "lint": "npx stylelint ./src/assets/scss/**/*.scss --fix && npx stylelint ./src/{components,pages}/**/*.vue --fix && eslint ./src --fix",
+    "dev": "vite",
+    "build": "eslint ./src --fix && vite build",
+    "lint": "npx stylelint ./src/assets/scss/**/*.scss --fix && npx stylelint ./src/components/**/*.vue --fix && eslint ./src --fix",
     "rename": "node rename.js && npm run build"
   },
   "type": "module",

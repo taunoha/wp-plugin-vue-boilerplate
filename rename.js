@@ -1,4 +1,5 @@
 import prompts from "prompts";
+import { exec } from 'node:child_process';
 import fs from "fs";
 import { fileURLToPath } from 'url';
 import path from "path";
@@ -39,7 +40,8 @@ const questions = [
   console.log("Replacing in file contents...");
   searchReplaceContents(replacements);
 
-  console.log("Remove the 'rename.js' file and the 'promps' dependency from package.json.");
+  await removeRenameFile();
+  
   console.log("Done.");
   
 })();
@@ -85,3 +87,8 @@ const walkSync = (dir, filelist = []) => {
     (path) => !path.match(/node_modules|\.git|package-lock|rename\.js/)
   );
 };
+
+const removeRenameFile = async () => {
+  fs.unlinkSync('rename.js');
+  await new Promise(resolve => exec('npm uninstall prompts', () => resolve()));
+}

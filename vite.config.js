@@ -5,7 +5,8 @@ import { defineConfig } from 'vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import vue from '@vitejs/plugin-vue'
-import gettextExtractorForWordpress from './vite-plugins/gettext-extractor-for-wordpress.js'
+import gettextExtractorForWordpress from './vite-plugins/gettext-extractor-for-wordpress.js';
+import prepareHMR from './vite-plugins/prepare-hmr.js';
 
 const filename = '{plugin-shortcode}';
 
@@ -35,11 +36,9 @@ export default defineConfig({
       path: path.resolve(__dirname, 'languages/'),
       context: '',
       domain: '{plugin-shortcode}'
-    })
+    }),
+    prepareHMR(),
   ],
-  server: {
-    hmr: false
-  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -49,7 +48,7 @@ export default defineConfig({
     lib: {
       name: '{plugin}',
       entry: path.resolve(__dirname, `src/main.js`),
-      formats: ['iife'],
+      formats: ['es'],
       fileName: () => `${filename}.js`
     },
     rollupOptions: {

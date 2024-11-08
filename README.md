@@ -37,8 +37,12 @@ You can also use the `Shortcode block` in your WordPress editor to add the short
 * Format your source code
 
 ### 👉  `npm run build`
-* Check your source code for programmatic and stylistic errors, and format your code.
+* Check your source code for programmatic and stylistic errors.
 * Will extract translatable strings from your code and generate the `languages/messages.php` file.
+* 
+## ❗️ Deploy
+
+The `dist` folder will be overridden each time you run `npm run build` or `npm run dev`. Do not commit this folder to version control. If you use any CI/CD pipeline, make sure to trigger the build process as part of your deployment workflow.
 
 ## 🌶️ Auto-imports
 
@@ -66,6 +70,16 @@ You can use these components in your templates as:
 ```
 
 Contrary to a classic global declaration, it will preserve typings, IDE completions, and hints and only include what is used in your code.
+
+## 🌶️ Hot Module Replacement (HMR)
+
+Hot Module Replacement (HMR) is a development feature that automatically updates your application in real-time as you modify your code. When you run `npm run dev`, HMR will:
+
+- Instantly reflect JavaScript and CSS changes in your browser without a full page reload
+- Preserve the application state during updates
+- Significantly speed up your development workflow
+
+HMR is automatically enabled in development mode (`npm run dev`) and disabled in production builds. You don't need any additional configuration to use this feature.
 
 ## &lt;ErrorBoundary&gt; component
 

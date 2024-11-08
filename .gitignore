@@ -11,9 +11,7 @@ node_modules
 .DS_Store
 *.local
 
-components.d.ts
-auto-imports.d.ts
-.eslintrc-auto-import.json
+dist
 
 # Editor directories and files
 .vscode/*
